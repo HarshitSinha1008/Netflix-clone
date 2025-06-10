@@ -61,5 +61,5 @@ This is a fully responsive front-end Netflix landing page clone built using only
 
 ✅ Demo:
 
-🔗 Live Demo
+🔗 https://netflix-clone-7jhm.vercel.app/
 
