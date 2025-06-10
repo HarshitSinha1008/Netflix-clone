@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar{
+    background-color: transparent;
+    height: 68px;
+    display: flex;
+    padding: 0 39px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;  
+    justify-content: space-between; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-logo{
+    width: 100px;
+    height: 68px;
+    display: flex;
+    margin-right: 15px;
+}
+
+.logo{
+    background-image: url(pngwing.com.png);
+    height: 50px;
+    width: 100px;
+    background-size: cover;
+}
+
+.nav-items{
+    display: flex;
+    gap: 15px;
+    align-items: center;}
+
+.home{
+    color: #ffffff;
+    font-weight: 1000;
+    font-size: 10px;
+}
+
+.items{
+    color: #e5e5e5;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.nav_icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.search i {
+    font-size: 28px;     /* Bigger icon */
+    color: rgb(255, 255, 255);        /* Adjust to match theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child p {
+    color: rgb(255, 255, 255);         
+    font-size: 12px;       
+    font-weight: 600;      
+    text-transform: capitalize; 
+    margin: 0;              
+    cursor: pointer;
+}
+
+.bell i {
+    font-size: 28px;     /* Bigger icon */
+    color: rgb(255, 255, 255);        /* Adjust to match theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-btn img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.profile-btn i {
+  color: #ffffff;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.profile-dropdown.active .profile-btn i {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #141414;
+  color: rgb(16, 15, 15);
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  width: 160px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.dropdown-menu p {
+  padding: 10px 15px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.dropdown-menu p:hover {
+  background-color: #141313;
+}
+
+.image{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.backgroundimg{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+  position: relative;
+}
+
+.hero-content{
+  position: absolute;
+  left: 4%;
+  bottom: 25%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.overlayimg{
+  width: clamp(250px, 40vw, 600px);
+  height: auto;
+}
+
+.control {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  position: relative;
+}
+
+.play {
+  display: flex;
+  gap: 15px;
+}
+
+.playbtn,
+.moreinfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.playbtn {
+  background: white;
+  color: black;
+  
+}
+
+.playbtn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.moreinfo {
+  background: rgba(109, 109, 110, 0.5);
+  color: white;
+}
+
+.moreinfo:hover {
+  background: rgba(109, 109, 110, 0.8);
+}
+
+.hero_fade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .poster {
+    width: 140px;
+    height: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+.row1_title{
+  display: table-cell;
+  font-size: 25px;
+  line-height: 1.25vw;
+  vertical-align: bottom;
+  padding-left: 40px;
+  padding-bottom: 5px;
+  color: #e5e5e5;
+  cursor: pointer;
+}
+
+.row {
+  margin-left: 20px;
+  color: white;
+  padding: 20px;
+}
+
+.movie-section {
+  padding-left: 40px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.movie-row {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.poster {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.movie-section::-webkit-scrollbar {
+  display: none;
+}
+
+.poster:hover {
+  transform: scale(1.08);
+}
+
+.top10 {
+  padding: 20px 40px;
+  overflow-x: scroll;
+}
+.top10::-webkit-scrollbar {
+  display: none;
+}
+
+.top10row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top10poster {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.top10poster:hover {
+  transform: scale(1.08);
+}
+
+.top10image {
+  height: 300px;
+  width: auto;
+  object-fit: cover;
+}
+
+.games {
+  padding: 20px 40px;
+  overflow-x: scroll;
+}
+
+.games::-webkit-scrollbar {
+  display: none;
+}
+
+.game-row {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.gameposter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.gameposter:hover {
+  transform: scale(1.08);
+}
+
+.gameimage {
+  height: 150px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.name {
+  margin-top: 8px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 1000;
+}
+
+.about{
+  padding-left: 250px;
+}
+
+.social{
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.social i{
+  font-size: 30px;
+  transition: color .4s ease;
+  gap: 20px;
+}
+
+.social i:hover{
+  color: #ff0000;
+}
+
+.foot-row {
+  padding-left: 245px;
+  margin-top: 15px;
+  display: flex;
+  gap: 200px;
+  align-items: center;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.a{
+  color: #808080;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.b{
+  color: #808080;
+  font-size: 13px;
+  padding-left: 245px;
+  margin-top: 15px;
+}
+
