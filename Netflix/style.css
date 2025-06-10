@@ -432,3 +432,68 @@ header {
   margin-top: 15px;
 }
 
+/* Make navbar and hero section responsive */
+@media screen and (max-width: 768px) {
+    .nav-items {
+        display: none;
+    }
+
+    .nav_icons {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .profile-btn img {
+        width: 30px;
+    }
+
+    .backgroundimg, .overlayimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .movie-row, .top10row, .game-row {
+        overflow-x: scroll;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .poster, .top10image, .gameimage {
+        width: 140px;
+        height: auto;
+    }
+
+    .gameposter .name {
+        font-size: 12px;
+    }
+
+    .control .playbtn, .control .moreinfo {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+/* Even smaller phones */
+@media screen and (max-width: 480px) {
+    .profile-btn i {
+        display: none;
+    }
+
+    .child p {
+        display: none;
+    }
+
+    .movie-row, .top10row, .game-row {
+        gap: 8px;
+    }
+
+    .poster {
+        width: 120px;
+    }
+
+    h2, .row1_title {
+        font-size: 16px;
+    }
+}
+
